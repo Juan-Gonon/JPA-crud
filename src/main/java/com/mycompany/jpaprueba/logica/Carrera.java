@@ -1,11 +1,13 @@
 package com.mycompany.jpaprueba.logica;
 
 import java.io.Serializable;
+import java.util.LinkedList;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Carrera implements Serializable {
@@ -17,12 +19,24 @@ public class Carrera implements Serializable {
     @Basic
     private String nombre;
 
+    @OneToMany
+    private LinkedList<Materia> listaMateria;
+
     public Carrera() {
     }
 
-    public Carrera(int id, String nombre) {
+    public Carrera(int id, String nombre, LinkedList<Materia> listaMateria) {
         this.id = id;
         this.nombre = nombre;
+        this.listaMateria = listaMateria;
+    }
+
+    public LinkedList<Materia> getListaMateria() {
+        return listaMateria;
+    }
+
+    public void setListaMateria(LinkedList<Materia> listaMateria) {
+        this.listaMateria = listaMateria;
     }
 
     public int getId() {
