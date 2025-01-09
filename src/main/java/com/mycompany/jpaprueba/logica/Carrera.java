@@ -19,7 +19,7 @@ public class Carrera implements Serializable {
     @Basic
     private String nombre;
 
-    @OneToMany
+    @OneToMany(mappedBy="carrera")
     private LinkedList<Materia> listaMateria;
 
     public Carrera() {
