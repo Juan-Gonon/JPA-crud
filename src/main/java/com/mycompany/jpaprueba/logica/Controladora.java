@@ -9,4 +9,8 @@ public class Controladora {
         this.controlPersis.crearAlumno(alu);
     }
     
+    public void deleteAlumno (int id){
+        this.controlPersis.deleteAlumno(id);
+    }
+    
 }
