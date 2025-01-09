@@ -1,0 +1,12 @@
+# Ignorar carpetas de NetBeans
+nbproject/private/ build/ dist/
+# Ignorar archivos de compilaci�n
+*.class
+# Ignorar dependencias externas
+.mvn/ target/ .gradle/ gradle/
+# Ignorar logs
+*.log
+# Ignorar archivos espec�ficos del sistema
+.DS_Store Thumbs.db
+# Ignorar anotaciones generadas
+src/main/java/com/mycompany/jpaprueba/Generated Sources (annotations)/
