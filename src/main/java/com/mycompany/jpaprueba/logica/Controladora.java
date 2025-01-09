@@ -50,4 +50,26 @@ public class Controladora {
         return this.controlPersis.getCarreras();
     }
 
+    // Materia
+    public void createMateria(Materia materia) {
+        this.controlPersis.createCarrera(materia);
+    }
+
+    public void deleteMateria(int id) {
+        this.controlPersis.deleteMateria(id);
+    }
+
+    public void editMateria(Materia materia) {
+        controlPersis.editMateria(materia);
+    }
+
+    public Materia findMateria(int id) {
+
+        return controlPersis.findMateria(id);
+    }
+
+    public ArrayList<Materia> getMaterias() {
+        return this.controlPersis.getMaterias();
+    }
+
 }
