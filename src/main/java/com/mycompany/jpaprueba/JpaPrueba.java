@@ -12,6 +12,10 @@ public class JpaPrueba {
 
     public static void main(String[] args) {
         Controladora control = new Controladora();
+  
+        LinkedList<Materia> listaMateria = new LinkedList();
+        Carrera carrera = new Carrera(25, "Desarrollo de Software", listaMateria);
+        control.createCarrera(carrera);
 
         Materia mate1 = new Materia(58, "Programación I");
         Materia mate2 = new Materia(59, "Programación II");
@@ -21,15 +25,16 @@ public class JpaPrueba {
         control.createMateria(mate2);
         control.createMateria(mate3);
 
-        LinkedList<Materia> listaMateria = new LinkedList();
-
         listaMateria.add(mate1);
         listaMateria.add(mate2);
         listaMateria.add(mate3);
+        
+        // modificacion nivel logico
+        carrera.setListaMateria(listaMateria);
+        // modificacion nivel BD
+        control.editCarrera(carrera);
+        
 
-        Carrera carrera = new Carrera(25, "Programación", listaMateria);
-
-        control.createCarrera(carrera);
         Alumno alu2 = new Alumno(27, "Adelya", "Lopez", new Date(), carrera);
 
         control.createAlumno(alu2);
