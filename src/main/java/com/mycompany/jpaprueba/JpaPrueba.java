@@ -17,9 +17,9 @@ public class JpaPrueba {
         Carrera carrera = new Carrera(25, "Desarrollo de Software", listaMateria);
         control.createCarrera(carrera);
 
-        Materia mate1 = new Materia(58, "Programación I");
-        Materia mate2 = new Materia(59, "Programación II");
-        Materia mate3 = new Materia(60, "Programación III");
+        Materia mate1 = new Materia(58, "Programación I", carrera);
+        Materia mate2 = new Materia(59, "Programación II", carrera);
+        Materia mate3 = new Materia(60, "Programación III", carrera);
 
         control.createMateria(mate1);
         control.createMateria(mate2);
