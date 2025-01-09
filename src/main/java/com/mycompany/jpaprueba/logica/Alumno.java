@@ -24,6 +24,11 @@ public class Alumno implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fechaNac;
 
+    @Override
+    public String toString() {
+        return "Alumno{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", fechaNac=" + fechaNac + '}';
+    }
+
     public Alumno() {
     }
 

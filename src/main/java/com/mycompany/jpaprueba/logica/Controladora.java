@@ -1,6 +1,7 @@
 package com.mycompany.jpaprueba.logica;
 
 import com.mycompany.jpaprueba.persistencia.ControladoraPersistencia;
+import java.util.ArrayList;
 
 public class Controladora {
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
@@ -17,4 +18,13 @@ public class Controladora {
         controlPersis.editAlumno(alu);
     }
     
+    public Alumno findAlumno (int id){
+        
+        return controlPersis.findAlumno(id);
+    }
+    
+    public ArrayList<Alumno> getAlumnos(){
+        return this.controlPersis.getAlumnos();
+    }
+  
 }
