@@ -8,10 +8,12 @@ public class JpaPrueba {
 
     public static void main(String[] args) {
         Controladora control = new Controladora();
-        // Alumno alu = new Alumno(15, "Kamila", "Lopez", new Date());
+        Alumno alu = new Alumno(30, "Anna", "Lopez", new Date());
 
-        //control.createAlumno(alu);
-        control.deleteAlumno(30);
-
+        control.createAlumno(alu);
+        //control.deleteAlumno(30);
+        alu.setApellido("de Paula");
+        control.editAlumno(alu);
+     
     }
 }

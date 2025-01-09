@@ -13,4 +13,8 @@ public class Controladora {
         this.controlPersis.deleteAlumno(id);
     }
     
+    public void editAlumno (Alumno alu){
+        controlPersis.editAlumno(alu);
+    }
+    
 }

@@ -21,4 +21,12 @@ public class ControladoraPersistencia {
         }
     }
 
+    public void editAlumno(Alumno alu) {
+        try {
+            this.aluJpa.edit(alu);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
