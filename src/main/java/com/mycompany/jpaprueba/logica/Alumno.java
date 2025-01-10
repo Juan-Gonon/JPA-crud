@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -23,17 +24,34 @@ public class Alumno implements Serializable {
     
     @Temporal(TemporalType.DATE)
     private Date fechaNac;
+    
+    @OneToOne
+    private Carrera carrera;
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", fechaNac=" + fechaNac + '}';
+    }
 
     public Alumno() {
     }
 
-    public Alumno(int id, String nombre, String apellido, Date fechaNac) {
+    public Alumno(int id, String nombre, String apellido, Date fechaNac, Carrera carrera) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNac = fechaNac;
+        this.carrera = carrera;
     }
 
+    public Carrera getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(Carrera carrera) {
+        this.carrera = carrera;
+    }
+    
     public int getId() {
         return id;
     }
